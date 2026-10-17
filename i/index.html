@@ -53,7 +53,7 @@ a.btn:focus-visible { outline:2px solid var(--taupe); outline-offset:3px }
 </main>
 <script>
 (function () {
-  var raw = (location.search || '').replace(/^\?/, '');
+  var raw = (location.search || '').replace(/^\?/, '').split('&')[0];
   var partes = raw.split('.');
   var m = (partes[0] || '').match(/(\d{2,6})/);
   var id = m ? m[1] : '';

@@ -68,7 +68,7 @@ li b { color:var(--ink); font-weight:500 }
       var bin = atob(s), u = new Uint8Array(bin.length); for (var i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
       return new TextDecoder().decode(u); } catch (e) { return ''; }
   }
-  var raw = (location.search || '').replace(/^\?/, '');
+  var raw = (location.search || '').replace(/^\?/, '').split('&')[0];
   var partes = raw.split('.');
   var id = (partes[0] || '').replace(/\D/g, '');
   var nombre = partes[1] ? b64dec(partes[1]).trim() : '';
